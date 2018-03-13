@@ -110,7 +110,7 @@ const Tutorial = loadable(() =>
 const Docs = props => (
   <Fragment>
     <Switch>
-      <RouteWithProps path="/people" component={People} {...props} />
+      <RouteWithProps path="/docs/people" component={People} {...props} />
       <RouteWithProps
         path="/docs/tutorial/apis"
         component={Api}

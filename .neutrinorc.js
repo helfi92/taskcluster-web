@@ -1,6 +1,6 @@
 module.exports = {
   use: [
-    ['neutrino-preset-mozilla-frontend-infra', {
+    ['neutrino-preset-mozilla-frontend-infra', 
       react: {
         html: {
           title: process.env.APPLICATION_NAME
@@ -47,6 +47,10 @@ module.exports = {
 
           return options;
         });
+    }],
+    (neutrino) => {
+      // Fix issue with nested routes e.g /index/garbage
+      neutrino.config.output.publicPath('/')
     }
   ]
 };
