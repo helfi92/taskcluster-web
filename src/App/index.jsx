@@ -7,14 +7,12 @@ import RouteWithProps from '../components/RouteWithProps';
 import FontStager from '../components/FontStager';
 import ErrorPanel from '../components/ErrorPanel';
 import loadable from '../utils/loadable';
+import Docs from './Docs';
 import theme from '../theme';
 import './globals.css';
 
 const Home = loadable(() =>
   import(/* webpackChunkName: 'Home' */ '../views/Home')
-);
-const Documentation = loadable(() =>
-  import(/* webpackChunkName: 'Documentation' */ '../views/Documentation')
 );
 const NotFound = loadable(() =>
   import(/* webpackChunkName: 'NotFound' */ '../views/NotFound')
@@ -42,6 +40,7 @@ export default class App extends Component {
           <Switch>
             <RouteWithProps path="/docs" component={Documentation} />
             <RouteWithProps exact path="/" component={Home} />
+            <Docs {...props} />
             <Route component={NotFound} />
           </Switch>
         </BrowserRouter>
