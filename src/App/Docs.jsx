@@ -6,7 +6,7 @@ import 'prismjs/components/prism-jsx';
 import 'prismjs/themes/prism-okaidia.css';
 import SchemaTable from '../components/SchemaTable';
 import RouteWithProps from '../components/RouteWithProps';
-import NotFound from '../components/NotFound';
+import NotFound from '../views/NotFound';
 import Spinner from '../components/Spinner';
 
 const loadable = loader =>
@@ -111,88 +111,96 @@ const Docs = props => (
   <Fragment>
     <Switch>
       <RouteWithProps path="/people" component={People} {...props} />
-      <RouteWithProps path="/tutorial/apis" component={Api} {...markdownProps} />
       <RouteWithProps
-        path="/tutorial/authenticate"
+        path="/docs/tutorial/apis"
+        component={Api}
+        {...markdownProps}
+      />
+      <RouteWithProps
+        path="/docs/tutorial/authenticate"
         component={Authenticate}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/create-task-via-api"
+        path="/docs/tutorial/create-task-via-api"
         component={CreateTaskViaApi}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/debug-task"
+        path="/docs/tutorial/debug-task"
         component={DebugTask}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/download-task-artifacts"
+        path="/docs/tutorial/download-task-artifacts"
         component={DownloadTaskArtifacts}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/finding-tasks"
+        path="/docs/tutorial/finding-tasks"
         component={FindingTasks}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/gecko-decision-task"
+        path="/docs/tutorial/gecko-decision-task"
         component={GeckoDecisionTask}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/gecko-docker-images"
+        path="/docs/tutorial/gecko-docker-images"
         component={GeckoDockerImages}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/gecko-new-job"
+        path="/docs/tutorial/gecko-new-job"
         component={GeckoNewJob}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/gecko-task-graph"
+        path="/docs/tutorial/gecko-task-graph"
         component={GeckoTaskGraph}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/gecko-task-graph-howto"
+        path="/docs/tutorial/gecko-task-graph-howto"
         component={GeckoTaskGraphHowTo}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/gecko-tasks"
+        path="/docs/tutorial/gecko-tasks"
         component={GeckoTasks}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/hack-tc"
+        path="/docs/tutorial/hack-tc"
         component={HackTc}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/hello-world"
+        path="/docs/tutorial/hello-world"
         component={HelloWorld}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/monitor-task-status"
+        path="/docs/tutorial/monitor-task-status"
         component={MonitorTaskStatus}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/reviews"
+        path="/docs/tutorial/reviews"
         component={Reviews}
         {...markdownProps}
       />
       <RouteWithProps
-        path="/tutorial/what-is-tc"
+        path="/docs/tutorial/what-is-tc"
         component={WhatIsTc}
         {...markdownProps}
       />
-      <RouteWithProps path="/tutorial" component={Tutorial} {...markdownProps} />
+      <RouteWithProps
+        path="/docs/tutorial"
+        component={Tutorial}
+        {...markdownProps}
+      />
       <Route component={NotFound} />
     </Switch>
   </Fragment>

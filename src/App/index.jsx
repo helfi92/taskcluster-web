@@ -38,9 +38,8 @@ export default class App extends Component {
         {error && <ErrorPanel error={error} />}
         <BrowserRouter>
           <Switch>
-            <RouteWithProps path="/docs" component={Documentation} />
             <RouteWithProps exact path="/" component={Home} />
-            <Docs {...props} />
+            <Docs {...this.props} />
             <Route component={NotFound} />
           </Switch>
         </BrowserRouter>
