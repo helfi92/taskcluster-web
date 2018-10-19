@@ -5,7 +5,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 
-fetch(`http://localhost:5080/graphql`, {
+fetch(process.env.GRAPHQL_ENDPOINT, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({

@@ -27,6 +27,7 @@ To get started local development, create a file in the root of the repo named
 ```bash
 APPLICATION_NAME="Taskcluster"
 GRAPHQL_SUBSCRIPTION_ENDPOINT="ws://localhost:5080/subscription"
+GRAPHQL_ENDPOINT="http://localhost:5080/graphql"
 ```
 
 _Note: The `APPLICATION_NAME` can be whatever you wish it to be._
